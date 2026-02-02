@@ -1,0 +1,267 @@
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "PP Neue Montreal", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+a,
+p {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer {
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section {
+  width: 100%;
+  padding: 2em;
+}
+.row {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+}
+.col {
+  flex: 1;
+  display: flex;
+  gap: 1em;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/5;
+}
+.hero h1 {
+  margin-top: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 8.75vw;
+  font-weight: 500;
+  letter-spacing: -0.09rem;
+}
+.info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+}
+.info p {
+  width: 25%;
+}
+.hero-imgs {
+  margin-top: 10em;
+}
+.clients {
+  display: flex;
+}
+.clents-list {
+  flex: 1;
+}
+.clents-imgs {
+  margin-top: 4em;
+}
+.clents-imgs .row {
+  height: 700px;
+}
+.products-filter {
+  padding-bottom: 1em;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.about {
+  display: flex;
+}
+.about p {
+  margin-top: 8em;
+  flex: 1;
+}
+.outro .row {
+  margin-top: 8em;
+}
+.img-1 .mask,
+.img-6 .mask,
+.img-12 .mask {
+  background: url(./assets/img3.jpg) no-repeat 50% 50%; /* img 3 */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.img-2 .mask,
+.img-7 .mask,
+.img-14 .mask {
+  background: url(./assets/img4.jpg) no-repeat 50% 50%; /* img 4 */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.img-3 .mask,
+.img-15 .mask {
+  background: url(./assets/img7.jpg) no-repeat 50% 50%; /* img 7 */
+  background-size: cover;
+  cursor: pointer;
+}
+.img-4 .mask,
+.img-7 .mask {
+  background: url(./assets/img1.jpg) no-repeat 50% 50%; /* img 1 */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.img-5 .mask,
+.img-11 .mask,
+.img-16 .mask {
+  background: url(./assets/img2.jpg) no-repeat 50% 50%; /* img 2 */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.img-8 .mask,
+.img-17 .mask {
+  background: url(./assets/img5.jpg) no-repeat 50% 50%; /* img 5 */
+  background-size: cover;
+  cursor: pointer;
+}
+.img-9 .mask,
+.img-13 .mask {
+  background: url(./assets/img6.jpg) no-repeat 50% 50%; /* img 6 */
+  background-size: cover;
+  cursor: pointer;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth[data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  section,
+  nav,
+  footer {
+    padding: 1.5em;
+  }
+
+  .hero h1 {
+    font-size: 15vw;
+    margin-top: 2em;
+    line-height: 1;
+  }
+  .row,
+  .col,
+  .clients,
+  .about,
+  .info,
+  .products-filter {
+    flex-direction: column;
+    width: 100%;
+    gap: 2em; /* Elements ke beech ka gap maintain karein */
+  }
+
+  .info {
+    justify-content: flex-start;
+  }
+  .info p {
+    width: 100%; /* Paragraph ab full width lega, 25% nahi */
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .hero-imgs,
+  .clents-imgs,
+  .outro .row {
+    margin-top: 4em;
+  }
+
+  .about p {
+    margin-top: 2em; /* About text ko upar khiska diya */
+  }
+
+  /* 5. Image & Row Heights */
+  .clents-imgs .row {
+    height: auto; /* Fixed height (700px) hata di taaki content cut na ho */
+  }
+
+  .img {
+    width: 100%;
+    aspect-ratio: 4/5;
+  }
+
+  /* 6. Product Filter Chips */
+  .products-filter .col {
+    flex-direction: row; /* Filters ko row me hi rakhte hain wrap ke saath */
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .products-filter p {
+    font-size: 14px;
+    padding: 0.5em 1em;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Thoda button jaisa look diya mobile touch ke liye */
+    border-radius: 50px;
+  }
+
+  /* 7. Footer Stacking */
+  footer {
+    flex-direction: column;
+    gap: 1.5em;
+    text-align: center;
+    padding-bottom: 2em;
+  }
+}
